@@ -32,9 +32,9 @@ jobs:
         node-version: "lts/*"
     - name: edit local.properties
       env:
-      YT_API_KEY: {{$secrets.YT_API_KEY}}
-      run:|
-      echo youtubeAPIKey="$YT_API_KEY" > local.properties
+        YT_API_KEY: {{$secrets.YT_API_KEY}}
+      run: |
+       echo youtubeAPIKey="$YT_API_KEY" > local.properties
       shell: bash
 
     - name: Build with Gradle
